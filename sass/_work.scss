@@ -1,0 +1,27 @@
+.job-item {
+    border-bottom: 4px solid $border-color;
+
+    h5 {
+        padding: 15px 0;
+        font-weight: 900;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+}
+
+.job-holder > .job-item:first-child > h5 {
+    padding: 0 0 15px 0;
+}
+
+.job-title {
+    padding: 10px 0;
+    font-weight: 600;
+
+    span {
+        display: inline-block;
+        margin-left: 10px;
+        font-weight: normal;
+    }
+}

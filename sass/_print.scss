@@ -1,0 +1,30 @@
+@media print {
+    .sidebar-menu, .main-navigation, .banner-bg, .toggle-menu, .responsive-header {
+        display: none;
+    }
+
+    #contact {
+        display: none;
+    }
+
+    .project-item img {
+        display: none;
+    }
+
+    .project-item {
+        margin: 0 0 20px 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .page-section {
+        padding-top: 20px;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+        display: block;
+    }
+}

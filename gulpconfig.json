@@ -1,0 +1,47 @@
+{
+  "bundles": [
+    {
+      //"outputDirectory": null, // allows custom output folder other than directories.release
+      "filename": "styles.css",
+      "resources": [
+        "./temp/build/sass/style.css" // includes compiled sass file in bundle
+      ]
+    },
+    {
+      "filename": "scripts.js",
+      "resources": [
+        "./js/plugins.js",
+        "./js/main.js"
+      ]
+    }
+  ],
+  "directories": {
+    // uncomment if needing to copy assets to compiled folders
+    //"assets": [
+    //  {
+    //    "dest": "./core/release/images/",
+    //    "src": "./core/images/**/*.{jpg,svg}"
+    //  }
+    //],
+    "cleanCss": [ "./compiled/**/*.css" ],
+    "cleanJs": [ "./compiled/**/*.js" ],
+    "release": "./compiled/",
+    "temp": "./temp/build/",
+    "watch": [
+      {
+        "src": [ "js/**/*.js" ],
+        "tasks": [ "build:js" ]
+      },
+      {
+        "src": [ "sass/**/*.scss" ],
+        "tasks": [ "build:css" ]
+      }
+    ]
+  },
+  "sass": {
+    "filename": "sass/style.css",
+    "includePaths": [
+    ],
+    "main": "./sass/main.scss"
+  }
+}
