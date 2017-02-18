@@ -40,6 +40,8 @@
         background: rgba($black, 0.9);
         opacity: 0;
         visibility: 0;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
         @include transition(all, 200ms, linear);
 
         .inside {

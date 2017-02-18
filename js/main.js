@@ -13,11 +13,11 @@
         return false;
     });
 
-    $(document).ready(function () {
-        $('.project-item').bind('touchstart touchend', function (e) {
-            e.preventDefault();
-            $(this).toggleClass('project-hover');
-        });
-    });
+    //$(document).ready(function () {
+    //    $('.project-item').bind('touchstart touchend', function (e) {
+    //        e.preventDefault();
+    //        $(this).toggleClass('project-hover');
+    //    });
+    //});
 
 })(jQuery);
