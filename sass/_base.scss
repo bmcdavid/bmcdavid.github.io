@@ -54,6 +54,13 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
+h1.widget-title {
+    font-size: 24px;
+    font-family: 'robotobold';
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
 h4.widget-title {
 	font-size: 16px;
 	font-family: 'robotobold';

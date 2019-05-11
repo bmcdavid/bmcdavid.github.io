@@ -1,0 +1,24 @@
+---
+layout: root
+home: true
+---
+<div class="banner-bg" id="top">
+    <div class="banner-overlay"></div>
+    <div class="welcome-text">
+        <h2>Web developer, designer, mentor.</h2>
+        <h5>Always tinkering, learning, and helping others.</h5>
+    </div>
+</div>
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <div class="fluid-container">
+        <div class="content-wrapper">
+            {{ content }}
+            <div class="row" id="footer">
+                <div class="col-md-12 text-center">
+                    <p class="copyright-text">Copyright &copy; {{ site.time | date: '%Y' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

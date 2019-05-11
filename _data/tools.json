@@ -1,0 +1,79 @@
+[
+  {
+    "link": "https://www.visualstudio.com/",
+    "name": "Visual Studio",
+    "color": "#672179",
+    "image": "/img/tools/visual-studio.png",
+    "description": "My go-to integrated development environment (IDE), used in conjuction with Visual Studio Team Services and Github for continuous integration."
+  },
+  {
+    "link": "https://www.episerver.com/",
+    "name": "Episerver",
+    "color": "#FF543C",
+    "image": "/img/tools/episerver.png",
+    "description": "Simply the best CMS I've ever used with an excellent development community. Also, I am a CMS certified developer."
+  },
+  {
+    "link": "https://www.elastic.co/",
+    "name": "Elasticsearch",
+    "color": "#FFFFFF",
+    "image": "/img/tools/elasticsearch.png",
+    "description": "Contributor to Vulcan, an open-source elasticsearch client for Episerver."
+  },
+  {
+    "link": "https://www.nuget.org/",
+    "name": "Nuget",
+    "color": "#FFFFFF",
+    "image": "/img/tools/nuget.png",
+    "description": "Author of many packages to help simplify development for back-end developers."
+  },
+  {
+    "link": "https://www.octopus.com/",
+    "name": "Octopus Deploy",
+    "color": "#2E92DE",
+    "image": "/img/tools/octopus-deploy.png",
+    "description": "Created stream-lined deployments, initiated by Git checkins, which improved development efficiency and reduced deployment errors."
+  },
+  {
+    "link": "https://msdn.microsoft.com/powershell",
+    "name": "Powershell",
+    "color": "#FFFFFF",
+    "image": "/img/tools/powershell-logo.png",
+    "description": "Created scripts to assist in Octopus Deployment to create back-ups, manage log files. Also used in NuGet packages to help developers and designers setup local web sites such as creating IIS web sites."
+  },
+  {
+    "link": "https://msdn.microsoft.com/en-us/library/kx37x362.aspx",
+    "name": "C#",
+    "color": "#FFFFFF",
+    "image": "/img/tools/csharp.png",
+    "description": "My go-to programming language."
+  },
+  {
+    "link": "https://www.hubspot.com/",
+    "name": "HubSpot",
+    "color": "#FFFFFF",
+    "image": "/img/tools/hubspot.png",
+    "description": "Created .NET API client and HubSpot criteria for Episerver personalization."
+  },
+  {
+    "link": "https://git-scm.com/",
+    "name": "Git",
+    "color": "#F05133",
+    "image": "/img/tools/git.png",
+    "description": "My go-to for version control."
+  },
+  {
+    "link": "https://angularjs.org/",
+    "name": "Angular",
+    "color": "#FFFFFF",
+    "image": "/img/tools/angular.png",
+    "description": "Created richer UI experiences for integration tools and websites."
+  },
+  {
+    "link": "https://gulpjs.com/",
+    "name": "GulpJS",
+    "color": "#FFFFFF",
+    "image": "/img/tools/gulp.png",
+    "description": "Created tasks to compile sass, combine and minify CSS/JS files from a referenced JSON configuration file."
+  }
+]

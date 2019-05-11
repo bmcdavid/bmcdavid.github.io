@@ -1,0 +1,88 @@
+---
+layout: home
+---
+<div class="page-section" id="about">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">About Me</h4>
+            {% include about.html %}
+            <hr />
+        </div>
+    </div> <!-- #about -->
+</div>
+<div class="page-section" id="projects">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Skills</h4>
+            <p>Some of my favorite tools I use to get stuff done!</p>
+        </div>
+    </div>
+    <div class="row projects-holder">
+        {% for item in site.data.tools %}
+        <div class="col-md-4 col-sm-6">
+            <div class="project-item" style="background-color: {{ item.color }};">
+                <img src="{{ item.image }}" alt="{{ item.name }}">
+                <div class="project-hover">
+                    <div class="inside">
+                        <h5><a href="{{ item.link }}">{{ item.name }}</a></h5>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div> <!-- .projects-holder -->
+</div>
+<hr>
+<!-- Code -->
+<div class="page-section" id="code">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Code</h4>
+            <p>
+                My projects can be found on <a href="https://www.github.com/bmcdavid">GitHub</a>.
+            </p>
+            <div class="code-holder">
+                {% for item in site.data.opensource %}
+                <div class="code-item">
+                    <b><a href="{{ item.link }}">{{ item.name }}</a></b>
+                    <p>
+                        {{ item.description }}
+                    </p>
+                    <div>
+                        <b>Tools used:</b>
+                        {% for tool in item.tools %}
+                          {{ tool }}{% if forloop.last %}{% else %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="page-section" id="work">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Work Experience</h4>
+            <div class="job-holder">
+                {% for item in site.data.work %}
+                <div class="job-item">
+                    <h5>{{ item.name }}</h5>
+                    {% for role in item.jobs %}
+                    <div class="job-title">{{ role.title }} <span>{{ role.years }}</span></div>
+                    <ul>
+                        {% for r in role.accomplishments %}
+                        <li>{{ r }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% include contact-form.html %}
+<hr>

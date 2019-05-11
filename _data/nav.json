@@ -1,0 +1,32 @@
+[
+  {
+    "href": "#top",
+    "title": "Home",
+    "cssClass": "fa-home"
+  },
+  {
+    "href": "#about",
+    "title": "About Me",
+    "cssClass": "fa-user-o"
+  },
+  {
+    "href": "#projects",
+    "title": "Skills",
+    "cssClass": "fa-code"
+  },
+  {
+    "href": "#code",
+    "title": "Code",
+    "cssClass": "fa-github"
+  },
+  {
+    "href": "#work",
+    "title": "Experience",
+    "cssClass": "fa-briefcase"
+  },
+  {
+    "href": "#contact",
+    "title": "Contact Me",
+    "cssClass": "fa-envelope"
+  }
+]
