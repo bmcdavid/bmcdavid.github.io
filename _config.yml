@@ -6,9 +6,12 @@ url: "https://bmcdavid.github.io"
 twitter_username: bsm44
 github_username:  bmcdavid
 markdown: kramdown
+paginate: 1
+#permalink: /:title/
+paginate_path: blog/page:num/
 plugins:
   - jekyll-feed
-
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
