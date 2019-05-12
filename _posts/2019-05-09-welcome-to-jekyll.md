@@ -1,42 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-05-09 18:44:04 -0400
-tags: ['one', 'two', 'three', 'four']
+title:  "Hello, World!"
+date:   2019-05-12 18:00:00 -0400
+tags: ['personal']
 ---
-You’ll **find** this post in your `_posts` *directory*. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Every journey must start somewhere, and this blog is a start of a personal journey for me to share more, mostly code and tech, but other topics as well. I hope to grow as a writer during this process, which has been a struggle of mine while also helping others along the way.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+I could've made life easy on myself and just used an online service to blog. Instead, I've chosen to create my own using Github Pages and Jekyll. Perhaps one day I'll move on to [ASP.Net Core](https://docs.microsoft.com/en-us/aspnet/core/) to get more exposure to it since my day job primarily focuses on content management systems (CMS) using the older ASP.Net Framework.
 
-Jekyll also offers powerful support for code snippets:
-
-```ruby
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-```
-
-## a sample heading
-
-* a
-* b
-* c
-* d
-  * e
-  * f
-  * g
-* h
-* i
-
-```csharp
-// this is a comment
-var a = true;
-```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Finally, as my oldest girl says every morning I take her to school as we open the garage door, Hello, World!
