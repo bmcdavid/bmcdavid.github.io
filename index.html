@@ -1,373 +1,88 @@
-﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Brad McDavid - Web developer and designer</title>
-    <meta name="description" content="Web Developer">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/1.1.3/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="compiled/styles.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <!-- Volton Template - http://www.templatemo.com/tm-441-volton -->
-    <meta name="robots" content="noindex, nofollow">
-</head>
-<body>
-    <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="responsive-header visible-xs visible-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="top-section">
-                        <div class="profile-image">
-                            <img src="img/bradm.jpg" alt="Brad McDavid">
-                        </div>
-                        <div class="profile-content">
-                            <h3 class="profile-title">Brad McDavid</h3>
-                            <p class="profile-description">all-round top geezer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
-            <div class="main-navigation responsive-menu">
-                <ul class="navigation">
-                    <li><a href="#top"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#about"><i class="fa fa-user"></i>About Me</a></li>
-                    <li><a href="#projects"><i class="fa fa-code"></i>Skills</a></li>
-                    <li><a href="#code"><i class="fa fa-github"></i>Code</a></li>
-                    <li><a href="#work"><i class="fa fa-briefcase"></i>Experience</a></li>
-                    <li><a href="#contact"><i class="fa fa-envelope"></i>Contact Me</a></li>
-                </ul>
-            </div>
+---
+layout: home
+css: home
+---
+<div class="page-section" id="about">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">About Me</h4>
+            {% include about.html %}
+            <hr />
+        </div>
+    </div> <!-- #about -->
+</div>
+<div class="page-section" id="projects">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Skills</h4>
+            <p>Some of my favorite tools I use to get stuff done!</p>
         </div>
     </div>
-    <div class="sidebar-menu hidden-xs hidden-sm">
-        <div class="top-section">
-            <div class="profile-image">
-                <img src="img/bradm.jpg" alt="Brad McDavid">
-            </div>
-            <h3 class="profile-title">Brad McDavid</h3>
-            <p class="profile-description">all-round top geezer</p>
-        </div> <!-- top-section -->
-        <div class="main-navigation">
-            <ul class="navigation">
-                <li><a href="#top"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about"><i class="fa fa-user-o"></i>About Me</a></li>
-                <li><a href="#projects"><i class="fa fa-code"></i>Skills</a></li>
-                <li><a href="#code"><i class="fa fa-github"></i>Code</a></li>
-                <li><a href="#work"><i class="fa fa-briefcase"></i>Experience</a></li>
-                <li><a href="#contact"><i class="fa fa-envelope"></i>Contact Me</a></li>
-            </ul>
-        </div> <!-- .main-navigation -->
-        <div class="social-icons">
-            <ul>
-                <li><a href="https://twitter.com/bsm44"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.github.com/bmcdavid"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://blog.wsol.com/author/brad-mcdavid"><i class="fa fa-rss"></i></a></li>
-                <li><a href="https://untappd.com/user/bmcdavid"><i class="fa fa-beer"></i></a></li>
-                <li><a href="https://account.xbox.com/en-US/Profile?gamerTag=bsm44"><i class="fa fa-gamepad"></i></a></li>
-            </ul>
-        </div> <!-- .social-icons -->
-    </div> <!-- .sidebar-menu -->
-    <div class="banner-bg" id="top">
-        <div class="banner-overlay"></div>
-        <div class="welcome-text">
-            <h2>Web developer, designer, mentor.</h2>
-            <h5>Always tinkering, learning, and helping others.</h5>
-        </div>
-    </div>
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-        <div class="fluid-container">
-            <div class="content-wrapper">
-                <!-- ABOUT -->
-                <div class="page-section" id="about">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">About Me</h4>
-                            <!--<div class="about-image"><img src="img/8.jpg" alt="about me"></div>-->
-                            <p>I am a proud father of two awesome little girls, with an amazing better-half. We live in a tiny, peaceful town in north-eastern Kentucky, which is sadly technology poor; but I do enjoy the remote commute to the excellent digital agency <a href="https://www.wsol.com">WSOL</a>, located in the greater Chicago area.</p>
-                            <p>I strive to always improve and learn new things, many times through failures. I love to code and write useful tools that are customizable through the use of inversion of control and dependency injection; also, I really enjoy learning and using all the great things happening in DevOps like continuous delivery and cloud platforms, such as Microsoft Azure and Amazon Web Services.</p>
-                            <p>Outside of family and work, I enjoy playing Xbox; tinkering with software like <a href="https://kodi.tv/">Kodi</a>, <a href="https://www.silicondust.com/">HDHomerun</a>, <a href="http://www.nextpvr.com/">NextPVR</a>; and on rare, but great, occasions brewing beer with friends.</p>
-                            <hr />
-                        </div>
-                    </div> <!-- #about -->
-                </div>
-                <div class="page-section" id="projects">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Skills</h4>
-                            <p>Some of my favorite tools I use to get stuff done!</p>
-                        </div>
-                    </div>
-                    <div class="row projects-holder">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item" style="background-color: #672179">
-                                <img src="img/tools/visual-studio.png" alt="Visual Studio">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://www.visualstudio.com/">Visual Studio</a></h5>
-                                        <p>My go-to integrated development environment (IDE), used in conjuction with Visual Studio Team Services and Github for continuous integration.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item" style="background-color: #FF543C">
-                                <img src="img/tools/episerver.png" alt="Episerver">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="http://www.episerver.com/">Episerver</a></h5>
-                                        <p>Simply the best CMS I've ever used with an excellent development community. Also, I am a CMS certified developer.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/elasticsearch.png" alt="Elasticsearch">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://elastic.co/">Elasticsearch</a></h5>
-                                        <p>Contributor to Vulcan, an open-source elasticsearch client for Episerver.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/nuget.png" alt="Nuget">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://www.nuget.org/">Nuget</a></h5>
-                                        <p>Author of many packages to help simplify development for back-end developers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item" style="background-color: #2E92DE;">
-                                <img src="img/tools/octopus-deploy.png" alt="Octopus Deploy">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://octopus.com/">Octopus Deploy</a></h5>
-                                        <p>Created stream-lined deployments, initiated by Git checkins, which improved development efficiency and reduced deployment errors.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/powershell-logo.png" alt="Powershell">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://msdn.microsoft.com/powershell">Powershell</a></h5>
-                                        <p>Created scripts to assist in Octopus Deployment to create back-ups, manage log files. Also used in NuGet packages to help developers and designers setup local web sites such as creating IIS web sites.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/csharp.png" alt="C#">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://msdn.microsoft.com/en-us/library/kx37x362.aspx">C#</a></h5>
-                                        <p>My go-to programming language.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/hubspot.png" alt="HubSpot">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://www.hubspot.com/">HubSpot</a></h5>
-                                        <p>Created .NET API client and HubSpot criteria for Episerver personalization.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item" style="background-color: #F05133;">
-                                <img src="img/tools/git.png" alt="Git">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://git-scm.com/">Git</a></h5>
-                                        <p>My go-to for version control.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/angular.png" alt="Angular">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="https://angularjs.org/">Angular</a></h5>
-                                        <p>Created richer UI experiences for integration tools and websites.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/tools/gulp.png" alt="GulpJS">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="http://gulpjs.com/">GulpJS</a></h5>
-                                        <p>Created tasks to compile sass, combine and minify CSS/JS files from a referenced JSON configuration file.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- .projects-holder -->
-                </div>
-                <hr>
-                <!-- Code -->
-                <div class="page-section" id="code">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Code</h4>
-                            <p>
-                                My projects can be found on <a href="https://www.github.com/bmcdavid">GitHub</a>.
-                            </p>
-                            <div class="code-holder">
-                                <div class="code-item">
-                                    <b><a href="https://github.com/TCB-Internet-Solutions/vulcan">Vulcan</a></b>
-                                    <p>
-                                        An Elasticsearch client that indexes Episerver CMS and Commerce content.
-                                    </p>
-                                    <div>
-                                        <b>Tools used:</b> Episerver, Elasticsearch, C#, Visual Studio, Git
-                                    </div>
-                                </div>
-                                <div class="code-item">
-                                    <b><a href="https://bmcdavid.github.io/DotNetStarter">DotNetStarter</a></b>
-                                    <p>
-                                        Provides a startup engine and abstracted service locator that allows for an inversion of control (IoC) container such as <a href="https://bitbucket.org/dadhi/dryioc">DryIoc</a> and <a href="http://structuremap.github.io/">Structuremap</a> to be swapped at runtime using an ILocator abstraction.
-                                    </p>
-                                    <div>
-                                        <b>Tools used:</b> C#, Visual Studio, Git
-                                    </div>
-                                </div>
-                                <div class="code-item">
-                                    <b><a href="https://github.com/bmcdavid/Renderings">Renderings</a></b>
-                                    <p>
-                                        Provides a framework for creating view models using dependency injection, mainly focused on on Umbraco Cms to reduce code in razor views and promote content re-use with different views.
-                                    </p>
-                                    <div>
-                                        <b>Tools used:</b> C#, Visual Studio, Git
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="page-section" id="work">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Work Experience</h4>
-                            <div class="job-holder">
-                                <div class="job-item">
-                                    <h5>Episerver</h5>
-                                    <div class="job-title">Manager, Expert Services Development <span>2018 - present</span></div>
-                                    <ul>
-                                        <li>Assist clients with custom Episerver software implementations in creating new features, performance recommendations, and best practices.</li>
-                                        <li>Started documentation and knowledge sharing framework using git repositories and markdown files.</li>
-                                    </ul>
-                                </div>
-                                <div class="job-item">
-                                    <h5>WSOL</h5>
-                                    <div class="job-title">Product Manager <span>2014 - 2018</span></div>
-                                    <ul>
-                                        <li>Streamlined the software development lifecycle through implementing continuous integration and delivery using Git, Visual Studio Team Services, and Octopus Deploy.</li>
-                                        <li>Contributor to Elasticsearch open source project Vulcan, for indexing and searching Episerver CMS content and Episerver Commerce products and variants, giving clients a cost-effective search solution.</li>
-                                        <li>Built Gulp and MVC view engine for front-end designers to quick-start the design process through lo-fi, hi-fi, and final templates for client projects.</li>
-                                        <li>Developed and maintained company website using  Episerver content management system (CMS).</li>
-                                    </ul>
-                                    <div class="job-title">Lead Developer <span>2011 -2014</span></div>
-                                    <ul>
-                                        <li>Led development of WSOL's latest version of the Super Template (a dynamic Ektron CMS template empowering users in flexible layouts from a single ASP.Net page), utilizing the latest web standards including responsive web design and Ektron CMS PageBuilder.</li>
-                                        <li>Architected and developed new features or extensions to the core web product framework.</li>
-                                        <li>Led best practice development implementations for clients ensuring successful projects that meet client's needs.</li>
-                                        <li>Mentored developers to improve coding, troubleshooting, and communication skills</li>
-                                    </ul>
-                                </div>
-                                <div class="job-item">
-                                    <h5>Ektron</h5>
-                                    <div class="job-title">CMS Architect <span>2010 - 2011</span></div>
-                                    <ul>
-                                        <li>Communicated project information through functional specifications, information architecture, and implementation guides to ensure clients' requirements have been captured.</li>
-                                        <li>Served as technical lead with development teams throughout website design and implementation.</li>
-                                        <li>Provided best practice recommendations to clients in setup and implementation of Ektron CMS 400.NET.</li>
-                                    </ul>
-                                </div>
-                                <div class="job-item">
-                                    <h5>Morehead State University</h5>
-                                    <div class="job-title">Web Content Architect <span>2005 - 2010</span></div>
-                                    <ul>
-                                        <li>Developed a PHP / MySQL self-service web application that allows users to maintain a single password for Active Directory and Open LDAP authentication, create and forward e-mail addresses, and automate key business processes with ERP integration through a custom web service.</li>
-                                        <li>Implemented Ektron CMS300 to migrate Morehead State University's website from 30,000+ static HTML files to a database driven website with over 25,000 content items.</li>
-                                        <li>Designed strong system architecture to allow for reusable templates built around the latest Web standards such as XHTML, CSS, XML, XSLT, and ASP.NET.</li>
-                                        <li>Customized Ektron CMS by creating multiple RSS feeds utilizing XML from list summaries and taxonomies, with XSLT.</li>
-                                        <li>Performed training courses and support for faculty, staff, students and campus organizations maintaining content in the Ektron CMS and the Datatel e-Marketing CMS for Active Admissions / Active Alumni.</li>
-                                        <li>Served as a technical liaison between the Office of Communications and Marketing and the Office of Information Technology.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CONTACT -->
-                <div class="page-section" id="contact">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Contact Me</h4>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!--https://formspree.io/-->
-                        <form action="https://formspree.io/brad.mcdavid@gmail.com" method="post" class="contact-form">
-                            <fieldset class="col-md-6 col-sm-6">
-                                <input type="text" name="name" required placeholder="Your Name...">
-                            </fieldset>
-                            <fieldset class="col-md-6 col-sm-6">
-                                <input type="email" name="_replyto" required placeholder="Your Email...">
-                            </fieldset>
-                            <fieldset class="col-md-12 col-sm-12">
-                                <textarea name="message" id="message" cols="30" rows="6" placeholder="Leave your message..."></textarea>
-                            </fieldset>
-                            <fieldset class="col-md-12 col-sm-12">
-                                <input type="submit" class="button big default" value="Send Message">
-                            </fieldset>
-                            <input type="hidden" name="_subject" value="Web contact submission!" />
-                            <input type="text" name="_gotcha" style="display:none" />
-                        </form>
-                    </div> <!-- .contact-form -->
-                </div>
-                <hr>
-                <div class="row" id="footer">
-                    <div class="col-md-12 text-center">
-                        <p class="copyright-text">Copyright &copy; 2019</p>
+    <div class="row projects-holder">
+        {% for item in site.data.tools %}
+        <div class="col-md-4 col-sm-6">
+            <div class="project-item" style="background-color: {{ item.color }};">
+                <img src="{{ item.image }}" alt="{{ item.name }}">
+                <div class="project-hover">
+                    <div class="inside">
+                        <h5><a href="{{ item.link }}">{{ item.name }}</a></h5>
+                        <p>{{ item.description }}</p>
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
+    </div> <!-- .projects-holder -->
+</div>
+<hr>
+<!-- Code -->
+<div class="page-section" id="code">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Code</h4>
+            <p>
+                My projects can be found on <a href="https://www.github.com/bmcdavid">GitHub</a>.
+            </p>
+            <div class="code-holder">
+                {% for item in site.data.opensource %}
+                <div class="code-item">
+                    <b><a href="{{ item.link }}">{{ item.name }}</a></b>
+                    <p>
+                        {{ item.description }}
+                    </p>
+                    <div>
+                        <b>Tools used:</b>
+                        {% for tool in item.tools %}
+                          {{ tool }}{% if forloop.last %}{% else %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="compiled/scripts.min.js"></script>
-</body>
-</html>
+</div>
+<hr>
+<div class="page-section" id="work">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Work Experience</h4>
+            <div class="job-holder">
+                {% for item in site.data.work %}
+                <div class="job-item">
+                    <h5>{{ item.name }}</h5>
+                    {% for role in item.jobs %}
+                    <div class="job-title">{{ role.title }} <span>{{ role.years }}</span></div>
+                    <ul>
+                        {% for r in role.accomplishments %}
+                        <li>{{ r }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% include contact-form.html %}

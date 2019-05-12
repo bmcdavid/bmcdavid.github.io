@@ -1,11 +1,27 @@
 #footer {
 	p.copyright-text {
-		margin: 40px 0;
+		margin: 0;
 		font-size: 13px;
 		a {
 			color: $dark-bg;
 			&:hover {
 				color: $accent;
+			}
+		}
+	}
+
+	.social-icons {
+		display: block;
+		padding: 20px 40px 5px 40px;
+		li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		a {
+			font-size: 18px;
+			color: $social;
+			&:hover {
+				color: $social-hover;
 			}
 		}
 	}

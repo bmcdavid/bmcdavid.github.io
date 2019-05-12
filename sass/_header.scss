@@ -62,23 +62,6 @@ h3.profile-title {
 	}
 }
 
-.social-icons {
-	display: block;
-	padding: 20px 40px;
-	li {
-		display: inline-block;
-		margin-right: 20px;
-	}
-	a {
-		font-size: 18px;
-		color: $social;
-		&:hover {
-			color: $social-hover;
-		}
-	}
-}
-
-
 .responsive-header {
     background: $darker-bg;
 

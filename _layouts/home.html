@@ -14,11 +14,7 @@ home: true
     <div class="fluid-container">
         <div class="content-wrapper">
             {{ content }}
-            <div class="row" id="footer">
-                <div class="col-md-12 text-center">
-                    <p class="copyright-text">Copyright &copy; {{ site.time | date: '%Y' }}</p>
-                </div>
-            </div>
+            {% include footer.html %}
         </div>
     </div>
 </div>
