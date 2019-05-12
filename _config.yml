@@ -1,13 +1,10 @@
-name: Dev Thoughts
+name: Always be coding
 title: Brad McDavid
 email: brad.mcdavid@gmail.com
-description: A place to share stuff (do better)
+description: A place to share code, ideas, and just about anything else.
 url: "https://bmcdavid.github.io"
-twitter_username: bsm44
-github_username:  bmcdavid
 markdown: kramdown
-paginate: 1
-#permalink: /:title/
+paginate: 5
 paginate_path: blog/page:num/
 plugins:
   - jekyll-feed

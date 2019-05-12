@@ -207,11 +207,13 @@ function watchFiles() {
 const js = series(cleanJs, buildJs);
 const css = series(cleanCss, compileSass, buildCss);
 const assets = series(cleanAssets, copyAssets);
-const build = parallel(js, css, assets, jekyll);
+const build = parallel(js, css, assets);
+const jekyllBuild = series(build, jekyll);
 
 exports.assets = assets;
 exports.css = css;
 exports.js = js;
 exports.build = build;
+exports.jekyllBuild = jekyllBuild;
 exports.serve = series(build, jekyllServe);
 exports.default = build;

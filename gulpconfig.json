@@ -4,7 +4,8 @@
       //"outputDirectory": null, // allows custom output folder other than directories.release
       "filename": "styles.css",
       "resources": [
-        "./temp/build/sass/style.css" // includes compiled sass file in bundle
+        "./temp/build/sass/style.css",
+        "./css/github.css"
       ]
     },
     {

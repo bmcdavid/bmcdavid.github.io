@@ -5,7 +5,17 @@ layout: default
     <div class="row">
         <div class="col-md-12">
             <h1 class="widget-title">{{ page.title }}</h1>
-            <div>{{ page.date | date_to_string }}</div>
+            <div class="meta">
+                <div class="date" data-data="{{ page.date | date: '%Y-%m-%d'}}">
+                    {{ page.date | date_to_string }} 
+                </div>
+                <span class="fa fa-tags"> </span>
+                <ul class="tag">
+                  {% for tag in page.tags %}
+                  <li><a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
             {{ content }}
         </div>
     </div> 
