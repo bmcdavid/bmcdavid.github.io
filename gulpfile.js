@@ -172,7 +172,7 @@ function jekyll() {
 }
 
 function jekyllServe() {
-    return cp.spawn("bundle", ["exec", "jekyll", "serve", "--no-watch"], { stdio: "inherit" });
+    return cp.spawn("bundle", ["exec", "jekyll", "serve", "--watch"], { stdio: "inherit" });
 }
 
 // watch for changes to specified files

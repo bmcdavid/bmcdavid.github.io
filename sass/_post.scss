@@ -30,8 +30,15 @@
 			padding-left: 10px;
 		}
 	}
+	ul.tag-list{
+		list-style-type: none;
+		padding-left: 0;
+	}
 	li {
 		display: list-item
+	}
+	.date{
+		padding-right: .5em;
 	}
 	.tag {
 		display: inline;
