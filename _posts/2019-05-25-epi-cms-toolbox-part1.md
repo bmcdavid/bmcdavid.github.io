@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Episerver Cms Toolbox"
+title:  "Episerver Cms Toolbox, Part 1"
 date:   2019-05-12 18:00:00 -0400
-tags: ['personal']
+tags: ['episerver', 'nuget']
 ---
 I have created many NuGet packages over these past few years, many have broken down into very specific focuses. My Episerver Cms Toolbox package is a push back against that. It is a collection of many useful concepts I have found to be very beneficial to my Episerver projects. I am going to cover one of those useful concepts in this post, a strategy based content area renderer.
 
@@ -51,4 +51,4 @@ There is also a Prefiltered property for use cases when building a ContentArea p
 
 The NuGet package for this strategy based content area rendering called **bmcdavid.Episerver.CmsToolbox.AspNet** and will be in the Episerver NuGet feed shortly. The source code is also on my [GitHub](https://github.com/bmcdavid/epi-cms-toolbox). The next post in this toolbox series will be leveraging interface attributes to provide Episerver UI information to allow developers to choose composition over inheritance.
 
-Happing coding!.
+Happing coding!
