@@ -1,0 +1,25 @@
+name: Brad McDavid
+title: Brad McDavid
+email: brad.mcdavid@gmail.com
+description: A place to share code, ideas, and just about anything else.
+url: "https://bmcdavid.github.io"
+markdown: kramdown
+excerpt_separator: <!--more-->
+paginate: 5
+paginate_path: blog/page:num/
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - temp/
+  - gulpfile.js
+  - gulpconfig.json
+  - package.json
+  - package-lock.json

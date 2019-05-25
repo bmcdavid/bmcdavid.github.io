@@ -1,0 +1,47 @@
+---
+layout: default
+title: Tags
+permalink: /blog/tags/
+---
+<div class="page-section" id="post">
+  <div class="row">
+    <div class="col-md-12">
+        <h1 class="widget-title">Blog Tags</h1>
+        <div class="tags">
+          <ul class="tag-list">
+            {% for tag in site.tags %}
+            <li>
+              <a href="#{{ tag[0] }}">
+                <span class="fa fa-tags"> </span>
+                <span>{{ tag[0] }}</span>
+                <span class="count">{{ tag[1] | size }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% for tag in site.tags %}
+            <h2 class="capitalize" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+            <div>
+              {% for post in tag[1] %}
+                {% if post.title != null %}
+                  <article>
+                    {% if post.link %}
+                      <a href="{{ post.link }}">
+                    {% else %}
+                      <a href="{{ site.baseurl }}{{ post.url }}">
+                    {% endif %}
+                        {{ post.title }}
+                      </a>
+                      <time>{{ post.date | date_to_string }}</time>
+                      <div class="entry">
+                        {{ post.excerpt }}
+                      </div>
+                    </article>
+                {% endif %}
+              {% endfor %}
+                  </div>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+</div>

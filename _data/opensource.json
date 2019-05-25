@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Vulcan",
+        "link": "https://github.com/TCB-Internet-Solutions/vulcan",
+        "description": "An Elasticsearch client that indexes Episerver CMS and Commerce content.",
+        "tools": [
+            "Episerver",
+            "Elasticsearch",
+            "Visual Studio",
+            "C#",
+            "Git"
+        ]
+    },
+    {
+        "name": "DotNetStarter",
+        "link": "https://bmcdavid.github.io/DotNetStarter",
+        "description": "Provides a startup engine and abstracted service locator that allows for an inversion of control (IoC) container such as <a href=\"https://bitbucket.org/dadhi/dryioc\">DryIoc</a> and <a href=\"http://structuremap.github.io/\">Structuremap</a> to be swapped at runtime using an ILocator abstraction.",
+        "tools": [
+            "Visual Studio",
+            "C#",
+            "Git"
+        ]
+    },
+    {
+        "name": "Renderings",
+        "link": "https://github.com/bmcdavid/Renderings",
+        "description": "Provides a framework for creating view models using dependency injection, mainly focused on on Umbraco Cms to reduce code in razor views and promote content re-use with different views.",
+        "tools": [
+            "Visual Studio",
+            "C#",
+            "Git"
+        ]
+    }
+]

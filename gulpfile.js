@@ -1,32 +1,27 @@
 /// <binding BeforeBuild="" Clean="" ProjectOpened="" />
+// https://gist.github.com/jeromecoupe/0b807b0c1050647eb340360902c3203a
 
-var configFile = "./gulpconfig.json"; //file to read in settings from
-var configData = {}; //persisted config reference
-require('es6-promise').polyfill(); // fix undefined Promise class - used for autoprefixer
+const { src, dest, series, parallel } = require('gulp');
+const sass = require('gulp-sass');
+const concat = require("gulp-concat");
+const rename = require('gulp-rename');
+const cssmin = require("gulp-cssmin");
+const uglify = require("gulp-uglify");
+const sourcemaps = require("gulp-sourcemaps");
+const autoprefixer = require("gulp-autoprefixer");
+const fs = require("fs");
+const cp = require("child_process");
+const mergeStream = require('merge-stream');
+const del = require('del');
+const stripJsonComments = require('strip-json-comments');
 
-// Packages
-var gulp = require('gulp'),
-    sass = require("gulp-sass"), // sass compiler
-    concat = require("gulp-concat"), // combines files from sources
-    rename = require('gulp-rename'), // renames file
-    inject = require('gulp-inject-string'), // wraps file for mediaqueries
-    cssmin = require("gulp-cssmin"), // min css
-    uglify = require("gulp-uglify"), // min js
-    replace = require('gulp-replace-task'), // replaces package manager variables
-    sourcemaps = require("gulp-sourcemaps"), // build source maps
-    autoprefixer = require("gulp-autoprefixer"), // add vendor prefixes
-    fs = require("fs"), // read files
-    mergeStream = require('merge-stream'), // for building gulp tasks in a loop
-    del = require('del'), // cleanup files
-    stripJsonComments = require('strip-json-comments') // removes comments from json
-    ;
+var configFile = "./gulpconfig.json";
+var configData = {};
 
 // sets configData from parsing configFile
 function readConfigData() {
     var file = fs.readFileSync(configFile, { encoding: 'utf-8' });
     configData = JSON.parse(stripJsonComments(file).replace(/\s+/g, " "));
-
-    // init empty properties
     configData.bundles = configData.bundles || [];
     configData.directories = configData.directories || {};
     configData.directories.assets = configData.directories.assets || [];
@@ -49,34 +44,27 @@ function getConfigData() {
     if (Object.keys(configData).length === 0) {
         readConfigData();
     }
-
     return configData;
 }
 
 // common gulp task for building JS bundle
 function buildGulpJs(bundle, config) {
-    var variables = bundle.enableVariables == true ? config.packageManager.variables : {};
-
-    return gulp.src(bundle.resources)
+    return src(bundle.resources)
         .pipe(concat(bundle.filename))
-        .pipe(replace({ prefix: "", patterns: [{ json: variables }] }))
-        .pipe(gulp.dest(bundle.outputDirectory || config.directories.release))
+        .pipe(dest(bundle.outputDirectory || config.directories.release))
         .pipe(rename({ suffix: ".min" }))
         .pipe(uglify())
-        .pipe(gulp.dest(bundle.outputDirectory || config.directories.release));
+        .pipe(dest(bundle.outputDirectory || config.directories.release));
 }
 
 // common gulp task for building CSS bundle
 function buildGulpCss(bundle, config) {
-    var variables = bundle.enableVariables == true ? config.packageManager.variables : {};
-
-    return gulp.src(bundle.resources)
+    return src(bundle.resources)
         .pipe(concat(bundle.filename))
-        .pipe(replace({ prefix: "", patterns: [{ json: variables }] }))
-        .pipe(gulp.dest(bundle.outputDirectory || config.directories.release))
+        .pipe(dest(bundle.outputDirectory || config.directories.release))
         .pipe(rename({ suffix: ".min" }))
         .pipe(cssmin())
-        .pipe(gulp.dest(bundle.outputDirectory || config.directories.release));
+        .pipe(dest(bundle.outputDirectory || config.directories.release));
 }
 
 // common cleanup
@@ -86,11 +74,8 @@ function clean(pathsToClean) {
     return del(pathsToClean);
 }
 
-// main build task
-gulp.task('default', ['build:js', 'build:css', 'copy:assets']);
-
 // main css task
-gulp.task('build:css', ['clean:css', 'compile:sass'], function () {
+function buildCss() {
     var config = getConfigData();
     var bundles = config.bundles;
     var tasks = [];
@@ -101,11 +86,12 @@ gulp.task('build:css', ['clean:css', 'compile:sass'], function () {
         }
     });
 
+    //return parallel(tasks);
     return mergeStream(tasks);
-});
+}
 
 // main js task
-gulp.task('build:js', ['clean:js'], function () {
+function buildJs() {
     var config = getConfigData();
     var bundles = config.bundles;
     var tasks = [];
@@ -116,48 +102,50 @@ gulp.task('build:js', ['clean:js'], function () {
         }
     });
 
+    //return parallel(tasks);
     return mergeStream(tasks);
-});
+}
 
 // compiles sass
-gulp.task("compile:sass", function () {
+function compileSass() {
     var config = getConfigData();
     var sassConfig = config.sass;
-    var variables = sassConfig.enableVariables == true ? config.packageManager.variables : {};
 
-    return gulp.src(sassConfig.main)
-        .pipe(replace({ prefix: "", patterns: [{ json: variables }] }))
+    return src(sassConfig.main)
         .pipe(sourcemaps.init())
         .pipe(sass({ includePaths: sassConfig.includePaths, errorLogToConsole: true }))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(rename(sassConfig.filename))
-        .pipe(gulp.dest(sassConfig.outputDirectory || config.directories.temp));
-});
+        .pipe(dest(sassConfig.outputDirectory || config.directories.temp));
+}
 
 // copy files
-gulp.task('copy:assets', ['clean:assets'], function () {
+function copyAssets() {
     var config = getConfigData();
     var assets = config.directories.assets;
     var tasks = [];
 
     assets.forEach(function (asset) {
         tasks.push(
-            gulp.src(asset.src)
-                .pipe(gulp.dest(asset.dest))
+            src(asset.src)
+                .pipe(dest(asset.dest))
         );
     });
 
     // add empty tasks for flow
-    if (tasks.length == 0) {
-        tasks.push(gulp.src(''));
+    if (tasks.length === 0) {
+        return new Promise(function (resolve) {
+            console.log("No assets defined!");
+            resolve();
+        });
     }
 
     return mergeStream(tasks);
-});
+}
 
 // delete copied assets
-gulp.task('clean:assets', function () {
+function cleanAssets() {
     var assets = getConfigData().directories.assets;
     var pathsToClean = [];
 
@@ -166,46 +154,72 @@ gulp.task('clean:assets', function () {
     });
 
     return clean(pathsToClean);
-});
+}
 
 // deletes cleanCss directories
-gulp.task('clean:css', function () {
+function cleanCss() {
     return clean(getConfigData().directories.cleanCss);
-});
+}
 
 // delete cleanJs directories
-gulp.task('clean:js', function () {
+function cleanJs() {
     return clean(getConfigData().directories.cleanJs);
-});
+}
 
-// reloads configData
-gulp.task('init:config', function () {
-    readConfigData();
-});
+// Jekyll
+function jekyll() {
+    return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
+}
+
+function jekyllServe() {
+    return cp.spawn("bundle", ["exec", "jekyll", "serve", "--watch"], { stdio: "inherit" });
+}
+
+function jekyllServeDrafts() {
+    return cp.spawn("bundle", ["exec", "jekyll", "serve", "--watch", "--drafts"], { stdio: "inherit" });
+}
 
 // watch for changes to specified files
-gulp.task("watch", function () {
+function watchFiles() {
     var config = getConfigData();
 
     // sass
     var sassWatch = config.sass.includePaths.slice(0);
 
     for (var i = 0; i < sassWatch.length; i++) {
-        if (sassWatch[i].slice(-1) == '/') {
+        if (sassWatch[i].slice(-1) === '/') {
             sassWatch[i] += "*";
         }
     }
 
     sassWatch.push(config.sass.main);
-    gulp.watch(sassWatch, ["build:css"]);
+    //watch(sassWatch, ["build:css"]);
 
     // config
-    gulp.watch(configFile, ["init:config", "default"]);
+    //gulp.watch(configFile, ["init:config", "default"]);
 
     // custom
     var customWatches = config.directories.watch || [];
 
-    for (var i = 0; i < customWatches.length; i++) {
-        gulp.watch(customWatches[i].src, customWatches[i].tasks || ["default"]);
+    for (var j = 0; i < customWatches.length; i++) {
+        gulp.watch(customWatches[j].src, customWatches[j].tasks || ["default"]);
     }
-});
+}
+
+// define complex tasks
+//const watch = parallel(watchFiles, browserSync);
+const js = series(cleanJs, buildJs);
+const css = series(cleanCss, compileSass, buildCss);
+const assets = series(cleanAssets, copyAssets);
+const build = parallel(js, css, assets);
+const jekyllBuild = series(build, jekyll);
+
+exports.clean = parallel(cleanCss, cleanJs, cleanAssets);
+exports.assets = assets;
+exports.css = css;
+exports.js = js;
+exports.build = build;
+exports.jekyllBuild = jekyllBuild;
+exports.serve = series(build, jekyllServe);
+exports.serveDrafts = series(build, jekyllServeDrafts);
+exports.default = build;

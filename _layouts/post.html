@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="page-section" id="post">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="widget-title">{{ page.title }}</h1>
+            <div class="meta">
+                <span class="date" data-data="{{ page.date | date: '%Y-%m-%d'}}">
+                    {{ page.date | date_to_string }} 
+                </span>
+                <span class="fa fa-tags"> </span>
+                <ul class="tag">
+                  {% for tag in page.tags %}
+                  <li><a href="{{ site.url }}{{ site.baseurl }}/blog/tags#{{ tag }}">{{ tag }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {{ content }}
+        </div>
+    </div> 
+</div>

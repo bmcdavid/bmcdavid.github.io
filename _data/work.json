@@ -1,0 +1,71 @@
+[
+    {
+        "name": "Episerver",
+        "jobs": [
+            {
+                "title": "Manager, Expert Services Development",
+                "years": "2018 - present",
+                "accomplishments": [
+                    "Assist clients with custom Episerver software implementations in creating new features, performance recommendations, and best practices.",
+                    "Started documentation and knowledge sharing framework using git repositories and markdown files."
+                ]
+            }
+        ]
+    },
+    {
+        "name": "WSOL (now Diagram)",
+        "jobs": [
+            {
+                "title": "Product Manager",
+                "years": "2014 - 2018",
+                "accomplishments": [
+                    "Streamlined the software development lifecycle through implementing continuous integration and delivery using Git, Visual Studio Team Services, and Octopus Deploy.",
+                    "Contributor to Elasticsearch open source project Vulcan, for indexing and searching Episerver CMS content and Episerver Commerce products and variants, giving clients a cost-effective search solution.",
+                    "Built Gulp and MVC view engine for front-end designers to quick-start the design process through lo-fi, hi-fi, and final templates for client projects.",
+                    "Developed and maintained company website using  Episerver content management system (CMS)."
+                ]
+            },
+            {
+                "title": "Lead Developer",
+                "years": "2011 - 2014",
+                "accomplishments": [
+                    "Led development of WSOL's latest version of the Super Template (a dynamic Ektron CMS template empowering users in flexible layouts from a single ASP.Net page), utilizing the latest web standards including responsive web design and Ektron CMS PageBuilder.",
+                    "Architected and developed new features or extensions to the core web product framework.",
+                    "Led best practice development implementations for clients ensuring successful projects that meet client's needs.",
+                    "Mentored developers to improve coding, troubleshooting, and communication skills"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ektron",
+        "jobs": [
+            {
+                "title": "CMS Architect",
+                "years": "2010 - 2011",
+                "accomplishments": [
+                    "Communicated project information through functional specifications, information architecture, and implementation guides to ensure clients' requirements have been captured.",
+                    "Served as technical lead with development teams throughout website design and implementation.",
+                    "Provided best practice recommendations to clients in setup and implementation of Ektron CMS 400.NET."
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Morehead State University",
+        "jobs": [
+            {
+                "title": "Web Content Architect",
+                "years": "2005 - 2010",
+                "accomplishments": [
+                    "Developed a PHP / MySQL self-service web application that allows users to maintain a single password for Active Directory and Open LDAP authentication, create and forward e-mail addresses, and automate key business processes with ERP integration through a custom web service.",
+                    "Implemented Ektron CMS300 to migrate Morehead State University's website from 30,000+ static HTML files to a database driven website with over 25,000 content items.",
+                    "Designed strong system architecture to allow for reusable templates built around the latest Web standards such as XHTML, CSS, XML, XSLT, and ASP.NET.",
+                    "Customized Ektron CMS by creating multiple RSS feeds utilizing XML from list summaries and taxonomies, with XSLT.",
+                    "Performed training courses and support for faculty, staff, students and campus organizations maintaining content in the Ektron CMS and the Datatel e-Marketing CMS for Active Admissions / Active Alumni.",
+                    "Served as a technical liaison between the Office of Communications and Marketing and the Office of Information Technology."
+                ]
+            }
+        ]
+    }
+]
