@@ -10,11 +10,6 @@
         "cssClass": "fa-user-o"
     },
     {
-        "href": "/blog/",
-        "title": "Blog",
-        "cssClass": "fa-rss-square"
-    },
-    {
         "href": "/#projects",
         "title": "Skills",
         "cssClass": "fa-code"

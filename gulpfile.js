@@ -2,7 +2,7 @@
 // https://gist.github.com/jeromecoupe/0b807b0c1050647eb340360902c3203a
 
 const { src, dest, series, parallel } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require("gulp-concat");
 const rename = require('gulp-rename');
 const cssmin = require("gulp-cssmin");
@@ -71,7 +71,8 @@ function buildGulpCss(bundle, config) {
 function clean(pathsToClean) {
     console.log("Cleaning: ", pathsToClean);
 
-    return del(pathsToClean);
+    del.sync(pathsToClean);
+    return Promise.resolve('done');
 }
 
 // main css task

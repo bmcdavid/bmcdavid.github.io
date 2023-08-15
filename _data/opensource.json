@@ -1,8 +1,18 @@
 [
     {
-        "name": "Vulcan",
+        "name": "nuget-license",
+        "link": "https://github.com/tomchavakis/nuget-license",
+        "description": "Contributor to .NET tool for analyzing NuGet package license information",
+        "tools": [
+            "C#",
+            "Git",
+            "Visual Studio"
+        ]
+    },
+    {
+        "name": "Vulcan (Contributor)",
         "link": "https://github.com/TCB-Internet-Solutions/vulcan",
-        "description": "An Elasticsearch client that indexes Episerver CMS and Commerce content.",
+        "description": "Contributer to an Elasticsearch client that indexes Episerver CMS and Commerce content.",
         "tools": [
             "Episerver",
             "Elasticsearch",

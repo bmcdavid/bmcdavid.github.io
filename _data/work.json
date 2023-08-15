@@ -1,38 +1,66 @@
 [
     {
-        "name": "Episerver",
+        "name": "Optimizely (formerly Episerver)",
         "jobs": [
             {
-                "title": "Manager, Expert Services Development",
-                "years": "2018 - present",
+                "title": "Staff Software Engineer",
+                "description": "Technical Lead of Product Information System (PIM) Software as a service (SaaS) application and Co-lead of Configured Commerce application.",
+                "years": "August 2021 - Present",
                 "accomplishments": [
-                    "Assist clients with custom Episerver software implementations in creating new features, performance recommendations, and best practices.",
-                    "Started documentation and knowledge sharing framework using git repositories and markdown files."
+                    "Modernized PIM SaaS application from large service classes to smaller focused commands, request, and event flows reducing many complexities while increasing code base maintainability.",
+                    "Created a .NET tool which inspects compiled assembly (.DLL) code that is used to customize the commerce application. This tool provides vital information around API usages to better help design decisions and when product code changes could greatly impact customizations.",
+                    "Advanced development processes utilizing MS Build tasks and conventions to generate validation files that were previously manually maintained.",
+                    "Assisting in conversion of large .NET Framework solution to .NET 6+ with multi-targeting to share code in most areas which allows current platform enhancements to continue during conversion.",
+                    "Mentor engineers from various locations, including Colombia and Vietnam, in software development architecture, best practices, and troubleshooting techniques.",
+                    "Rearchitected integration connector between PIM and Commerce by moving code from commerce application which had only monthly release cycles to externally maintained NuGet package-based upgrades allowing customers to receive new code much faster. This included using capability flags for client/server communications eliminating complexity of synchronizing PIM SaaS upgrades with new commerce versions."
+                ]
+            },
+            {
+                "title": "Senior Software Engineer",
+                "description": "Engineer on a team focused on backend APIs, integrations, and payment gateways.",
+                "years": "April 2020 - August 2021",
+                "accomplishments": [
+                    "Implemented payment gateways with environment integration tests which streamlined connectivity issues in new customer setups.",
+                    "Overhauled data imports for PIM application of product, category, and property data with some decreasing time by as much as 98%.",
+                    "Utilized feature flags for work in progress streamlining development process to ship code to production without being complete. This eliminated costly git merge issues on long lived features and enabled beta testing to portion of the product customers before enabling for all users."
+                ]
+            },
+            {
+                "title": "Manager, Expert Services Development",
+                "description": "Managed 3 direct reports and mentored 10 developers/quality assurance engineers in growing skill sets and professional development. Aligned work with employee’s career goals using bi-weekly one-on-one meetings and multiple review periods. Assisted clients with Episerver CMS and commerce implementations in creating new features, performance recommendations, and best practices for on-premise and Azure setups.",
+                "years": "September 2018 - April 2020",
+                "accomplishments": [
+                    "Developed and maintains web site assessment framework that analyzes various aspects of site including static code analysis for Episerver CMS and Commerce, .NET, and NuGet best practices. This code generated simple Excel output for client and partner distribution. ",
+                    "Started documentation and knowledge sharing framework using git repositories, markdown files, as well as lunch & learn presentations, resulting in deeper developer knowledge, best practices, and enhanced communication. "
                 ]
             }
         ]
     },
     {
-        "name": "WSOL (now Diagram)",
+        "name": "Diagram (formerly WSOL)",
         "jobs": [
             {
                 "title": "Product Manager",
-                "years": "2014 - 2018",
+                "description":"Developed and maintained technical service offerings. Innovated internal and external products and services. Created and sustained various packages that simplified client projects.",
+                "years": "June 2014 - September 2018",
                 "accomplishments": [
-                    "Streamlined the software development lifecycle through implementing continuous integration and delivery using Git, Visual Studio Team Services, and Octopus Deploy.",
-                    "Contributor to Elasticsearch open source project Vulcan, for indexing and searching Episerver CMS content and Episerver Commerce products and variants, giving clients a cost-effective search solution.",
-                    "Built Gulp and MVC view engine for front-end designers to quick-start the design process through lo-fi, hi-fi, and final templates for client projects.",
-                    "Developed and maintained company website using  Episerver content management system (CMS)."
+                    "Developed WSOL's Super Template, empowered content authors to create flexible page layouts without developer intervention that resulted in rich and maintainable content experiences.",
+                    "Authored 100+ NuGet packages to promote code re-use and consistency across open-source client projects.",
+                    "Automated deployment pipelines that publish web application changes on source control pull-requests, delivering quicker returns on client investment while greatly reducing human error in code deployment process.",
+                    "Streamlined software development lifecycle through implementing continuous integration and delivery using Git, Visual Studio Team Services, and Octopus Deploy.",
+                    "Contributed to Elasticsearch open-source project Vulcan, for indexing and searching Episerver CMS content and Episerver Commerce products and variants, provided clients with a cost-effective search solution.",
+                    "Built Gulp and MVC view engine for front-end designers to quickly start design process through lo-fi, hi-fi, and final templates for client projects.",
+                    "Developed and maintained company website using Episerver content management system (CMS) hosted in AWS, resulting in simple web site content contribution for non-technical content contributors."
                 ]
             },
             {
-                "title": "Lead Developer",
-                "years": "2011 - 2014",
+                "title": "Lead Developer / Development Manager",
+                "description": "Managed developers with focus on code skill set, troubleshooting techniques, and communication skills to align with future senior roles and more complex projects. Participated in project discovery & planning meetings to ensure success.",
+                "years": "May 2011 - June 2014",
                 "accomplishments": [
-                    "Led development of WSOL's latest version of the Super Template (a dynamic Ektron CMS template empowering users in flexible layouts from a single ASP.Net page), utilizing the latest web standards including responsive web design and Ektron CMS PageBuilder.",
-                    "Architected and developed new features or extensions to the core web product framework.",
-                    "Led best practice development implementations for clients ensuring successful projects that meet client's needs.",
-                    "Mentored developers to improve coding, troubleshooting, and communication skills"
+                    "Led development of WSOL's latest version of SuperTemplate (Dynamic Ektron CMS template to empower users to create flexible layouts from single ASP.NET web form), that utilized latest web standards including responsive web design and Ektron CMS PageBuilder. ",
+                    "Designed and developed new features and extensions to the core web product framework, allowing developers to quickly consume new features and bug fixes in client projects.",
+                    "Directed best practice development implementations for clients, ensured success of projects that meet those needs using Episerver CMS, Episerver Commerce, or Ektron CMS."
                 ]
             }
         ]
@@ -41,12 +69,12 @@
         "name": "Ektron",
         "jobs": [
             {
-                "title": "CMS Architect",
-                "years": "2010 - 2011",
+                "title": "CMS Architect / Best Practice Engineer",
+                "description": "Technical lead with development teams throughout website design and implementation. Communicated project information through functional specifications, information architecture, and implementation guides to ensure clients' requirements were captured. Provided best practice recommendations to clients in setup and implementation of Ektron CMS 400.NET.",
+                "years": "April 2010 - May 2011",
                 "accomplishments": [
-                    "Communicated project information through functional specifications, information architecture, and implementation guides to ensure clients' requirements have been captured.",
-                    "Served as technical lead with development teams throughout website design and implementation.",
-                    "Provided best practice recommendations to clients in setup and implementation of Ektron CMS 400.NET."
+                    "Led several successful client implementations within stringent deadlines.",
+                    "Assisted in planning and architecting projects for large complex / enterprise customers. "
                 ]
             }
         ]
@@ -56,14 +84,11 @@
         "jobs": [
             {
                 "title": "Web Content Architect",
-                "years": "2005 - 2010",
+                "description": "Performed training courses and support for faculty, staff, students, and campus organizations to maintain content in variety of content management systems. Responsible for systems administration, ASP.NET programming, and collaborated with cross functional departments to address web site needs.",
+                "years": "August 2005 - April 2010",
                 "accomplishments": [
-                    "Developed a PHP / MySQL self-service web application that allows users to maintain a single password for Active Directory and Open LDAP authentication, create and forward e-mail addresses, and automate key business processes with ERP integration through a custom web service.",
-                    "Implemented Ektron CMS300 to migrate Morehead State University's website from 30,000+ static HTML files to a database driven website with over 25,000 content items.",
-                    "Designed strong system architecture to allow for reusable templates built around the latest Web standards such as XHTML, CSS, XML, XSLT, and ASP.NET.",
-                    "Customized Ektron CMS by creating multiple RSS feeds utilizing XML from list summaries and taxonomies, with XSLT.",
-                    "Performed training courses and support for faculty, staff, students and campus organizations maintaining content in the Ektron CMS and the Datatel e-Marketing CMS for Active Admissions / Active Alumni.",
-                    "Served as a technical liaison between the Office of Communications and Marketing and the Office of Information Technology."
+                    "Developed PHP / MySQL self-service web application that allowed users to maintain single password for Active Directory and Open LDAP authentication, created and forwarded e-mail addresses, and automated key business processes with ERP integration through custom web service",
+                    "Implemented Ektron CMS300 to migrate Morehead State University's website from 30,000+ static HTML files to database driven website with +25K content items."
                 ]
             }
         ]

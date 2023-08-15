@@ -66,13 +66,14 @@ css: home
 <div class="page-section" id="work">
     <div class="row">
         <div class="col-md-12">
-            <h4 class="widget-title">Work Experience</h4>
+            <h4 class="widget-title">Professional Experience</h4>
             <div class="job-holder">
                 {% for item in site.data.work %}
                 <div class="job-item">
                     <h5>{{ item.name }}</h5>
                     {% for role in item.jobs %}
                     <div class="job-title">{{ role.title }} <span>{{ role.years }}</span></div>
+                    <div class="job-description">{{ role.description }}</div>
                     <ul>
                         {% for r in role.accomplishments %}
                         <li>{{ r }}</li>
