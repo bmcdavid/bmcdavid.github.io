@@ -1,11 +1,31 @@
 [
     {
+        "name": "StudioC",
+        "jobs": [
+            {
+                "title": "Senior Software Architect",
+                "description": "Technical lead of StudioC's flagship (SaaS) multi-tenant application Member Engagement Solution (MES)",
+                "years": "May 2024 - Present",
+                "accomplishments": [
+                    "Led and mentored a team of two, fostering best practices in software design and development, including SOLID principles.",
+                    "Streamlined deployment and QA by creating CI/CD pipelines in GitHub Actions, enabling other business units to oversee quality assurance independently.",
+                    "Developed a robust testing framework with Microsoft Playwright, targeting 90% code coverage through comprehensive end-to-end testing, currently achieving 60%.",
+                    "Modernized the tech stack by transitioning from vendor-specific solutions to Docker and migrating from AWS Elastic Beanstalk to AWS Elastic Container Service.",
+                    "Defined and maintained AWS infrastructure using Terraform to ensure reliability and scalability.",
+                    "Designed and implemented a new customer portal, providing a unified access point for all products and simplifying customer onboarding/offboarding with event-driven triggers.",
+                    "Directed the design and rollout of features such as multilingual support to enhance user experience.",
+                    "Implementing a migration plan with Entity Framework Core to transition the application to PostgreSQL, phasing out Microsoft SQL to simplify the technology stack."
+                ]
+            }
+        ]
+    },
+    {
         "name": "Optimizely (formerly Episerver)",
         "jobs": [
             {
                 "title": "Staff Software Engineer",
                 "description": "Technical Lead of Product Information System (PIM) Software as a service (SaaS) application and Co-lead of Configured Commerce application.",
-                "years": "August 2021 - Present",
+                "years": "August 2021 - May 2024",
                 "accomplishments": [
                     "Modernized PIM SaaS application from large service classes to smaller focused commands, request, and event flows reducing many complexities while increasing code base maintainability.",
                     "Created a .NET tool which inspects compiled assembly (.DLL) code that is used to customize the commerce application. This tool provides vital information around API usages to better help design decisions and when product code changes could greatly impact customizations.",
